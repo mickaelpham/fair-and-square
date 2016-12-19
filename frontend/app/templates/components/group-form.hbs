@@ -10,7 +10,7 @@
       <div class="col sml-12">
         <label for="inputGroupName">Name</label>
         {{one-way-input
-          group.name
+          name
           update=(action (mut name))
           id="inputGroupName"
           placeholder="Something relevant"
@@ -22,7 +22,7 @@
       <div class="col sml-12">
         <label for="inputGroupDescription">Description</label>
         {{one-way-textarea
-          group.description
+          description
           update=(action (mut description))
           id="inputGroupDescription"
           rows="7"
@@ -50,5 +50,19 @@
         {{/if}}
       </div>
     </div>
+
+    <div class="grid">
+      <div class="col sml-12">
+        <button class="full-width" {{action 'onCancel'}}>Cancel</button>
+      </div>
+    </div>
+
+    {{#if exists}}
+      <div class="grid">
+        <div class="col sml-12">
+          <button class="full-width red" {{action 'onDelete'}}>Delete group</button>
+        </div>
+      </div>
+    {{/if}}
   </fieldset>
 </form>

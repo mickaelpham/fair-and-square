@@ -2,8 +2,29 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+  margin-top: 1rem;
+}
+
+/* Force textareas to only resize vertically */
+textarea {
+  resize: vertical;
+}
+
+.group-link {
+  color: #000;
+}
+
+.group-link:hover {
+  text-decoration: none;
+}
+
 .group {
   margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background: #eee;
+  /*cursor: pointer;*/
 }
 
 .group-name {
@@ -11,6 +32,24 @@ body {
 }
 
 /* Fix for PluCSS full-size button */
-input[type="submit"].full-width {
+input[type="submit"].full-width,
+a.button.full-width {
   width: 100%;
+}
+
+a.button {
+  display: block;
+  text-align: center;
+}
+
+/* Top navbar
+-------------------------------------------------------* */
+.top-navbar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.top-navbar li a.active {
+  background-color: #258fd6;
+  color: #fff;
 }

@@ -38,6 +38,7 @@ class Api::GroupsController < ApplicationController
   # DELETE /api/groups/1
   def destroy
     @group.destroy
+    head :no_content
   end
 
   private

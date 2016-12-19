@@ -1,14 +1,27 @@
+<h3>Groups</h3>
+
 {{#each model as |group|}}
-  <div class="group">
-    <div class="group-name">
-      {{group.name}}
+  {{#link-to 'groups.show' group.id class="group-link"}}
+    <div class="group">
+      <div class="group-name">
+        {{group.name}}
+      </div>
+      <div class="group-description">
+        {{group.description}}
+      </div>
     </div>
-    <div class="group-description">
-      {{group.description}}
-    </div>
-  </div>
+  {{/link-to}}
 {{else}}
-  <div class="no-groups">There are no groups available.</div>
+  <div class="no-groups">
+    There are no groups available.
+    {{link-to 'Create one?' 'groups.new'}}
+  </div>
 {{/each}}
 
-{{group-form saveGroup=(route-action 'saveGroup')}}
+{{#if model}}
+  <div class="grid">
+    <div class="col sml-12">
+      {{link-to 'Create another group' 'groups.new' class="button"}}
+    </div>
+  </div>
+{{/if}}
