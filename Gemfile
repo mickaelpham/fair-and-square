@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 # Unify your EmberCLI and Rails Workflows
 gem 'ember-cli-rails'
+# JSON conventions
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
