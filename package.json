@@ -2,7 +2,7 @@
   "scripts": {
     "postinstall": "./bin/heroku_install"
   },
-  "devDependencies": {
+  "dependencies": {
     "bower": "^1.8.0"
   },
   "engines": {
