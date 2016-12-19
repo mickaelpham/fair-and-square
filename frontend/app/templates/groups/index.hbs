@@ -1,1 +1,12 @@
-{{outlet}}
+{{#each model as |group|}}
+  <div class="group">
+    <div class="group-name">
+      {{group.name}}
+    </div>
+    <div class="group-description">
+      {{group.description}}
+    </div>
+  </div>
+{{else}}
+  <div>There are no groups available. <a href="#">Create one?</a></div>
+{{/each}}
