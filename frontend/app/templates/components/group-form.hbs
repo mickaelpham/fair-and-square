@@ -1,17 +1,54 @@
+{{#if isNew}}
+  <h3>Add new group</h3>
+{{else}}
+  <h3>Edit group</h3>
+{{/if}}
+
 <form>
   <fieldset>
-    <div>
-      <label for="inputGroupName">Name</label><br>
-      <input type="text" id="inputGroupName">
+    <div class="grid">
+      <div class="col sml-12">
+        <label for="inputGroupName">Name</label>
+        {{one-way-input
+          group.name
+          update=(action (mut name))
+          id="inputGroupName"
+          placeholder="Something relevant"
+        }}
+      </div>
     </div>
 
-    <div>
-      <label for="inputGroupDescription">Description</label><br>
-      <textarea id="inputGroupDescription" rows="7"></textarea>
+    <div class="grid">
+      <div class="col sml-12">
+        <label for="inputGroupDescription">Description</label>
+        {{one-way-textarea
+          group.description
+          update=(action (mut description))
+          id="inputGroupDescription"
+          rows="7"
+          placeholder="Add extra info about your group."
+        }}
+      </div>
     </div>
 
-    <div>
-      <input type="submit" value="Create new group">
+    <div class="grid">
+      <div class="col sml-12">
+        {{#if isNew}}
+          <input
+            type="submit"
+            value="Create group"
+            class="full-width blue"
+            {{action 'onSubmit'}}
+          >
+        {{else}}
+          <input
+            type="submit"
+            value="Save group"
+            class="full-width blue"
+            {{action 'onSubmit'}}
+          >
+        {{/if}}
+      </div>
     </div>
   </fieldset>
 </form>

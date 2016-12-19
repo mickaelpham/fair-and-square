@@ -9,3 +9,8 @@ body {
 .group-name {
   font-weight: bold;
 }
+
+/* Fix for PluCSS full-size button */
+input[type="submit"].full-width {
+  width: 100%;
+}
