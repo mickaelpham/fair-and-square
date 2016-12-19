@@ -5,6 +5,9 @@
   "devDependencies": {
     "bower": "^1.8.0"
   },
+  "engines": {
+    "node": "6.9.2"
+  },
   "cacheDirectories": [
     "frontend/node_modules",
     "frontend/bower_components",
