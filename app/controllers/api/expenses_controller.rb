@@ -1,4 +1,10 @@
 class Api::ExpensesController < ApplicationController
+
+  # GET /api/expenses/1
+  def show
+    render json: Expense.find(params[:id])
+  end
+
   # POST /api/expenses
   def create
     @expense = Expense.new(expense_params)
