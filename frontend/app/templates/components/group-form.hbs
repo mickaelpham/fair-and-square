@@ -34,19 +34,13 @@
     <div class="grid">
       <div class="col sml-12">
         {{#if isNew}}
-          <input
-            type="submit"
-            value="Create group"
-            class="full-width blue"
-            {{action 'onSubmit'}}
-          >
+          <button class="full-width blue" {{action 'onSubmit'}}>
+            Create group
+          </button>
         {{else}}
-          <input
-            type="submit"
-            value="Save group"
-            class="full-width blue"
-            {{action 'onSubmit'}}
-          >
+          <button class="full-width blue" {{action 'onSubmit'}}>
+            Save group
+          </button>
         {{/if}}
       </div>
     </div>
