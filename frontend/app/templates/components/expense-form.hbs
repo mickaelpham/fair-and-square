@@ -34,12 +34,17 @@
   <div class="grid">
     <div class="col sml-12">
       <label for="inputDate">Date</label>
-      {{one-way-input
+      {{pikaday-input
+        placeholder="When was this paid?"
+        format="MM/DD/YYYY"
+        onSelection=(action (mut paidAt))
+      }}
+      {{!-- {{one-way-input
         date
         update=(action (mut date))
         placeholder="When was this paid?"
         id="inputDate"
-      }}
+      }} --}}
     </div>
   </div>
 
