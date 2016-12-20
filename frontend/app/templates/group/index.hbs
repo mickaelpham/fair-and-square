@@ -2,12 +2,8 @@
 <p>{{model.description}}</p>
 
 <div class="grid">
-  <div class="col sml-6">
+  <div class="col sml-12">
     {{link-to 'Edit group' 'group.edit' model class="button"}}
-  </div>
-
-  <div class="col sml-6">
-    {{link-to 'Add expense' 'group.add-expense' model class="button blue"}}
   </div>
 </div>
 
@@ -32,3 +28,9 @@
 {{else}}
   <p>No expenses found for this group.</p>
 {{/each}}
+
+<div class="grid">
+  <div class="col sml-12">
+    {{link-to 'Add expense' 'group.add-expense' model class="button blue"}}
+  </div>
+</div>

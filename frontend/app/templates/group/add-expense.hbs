@@ -1,42 +1,6 @@
 <h3>Add expense</h3>
 
-<form>
-  <fieldset>
-    <div class="grid">
-      <div class="col sml-12">
-        <label for="inputGroupName">Group</label>
-        {{one-way-input model.name disabled="disabled"}}
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="col sml-12">
-        <label for="inputDescription">Description</label>
-        <input type="text" id="inputDescription">
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="col sml-12">
-        <label for="inputAmount">Amount</label>
-        <input type="text" id="inputAmount">
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="col sml-12">
-        <label for="inputDate">Date</label>
-        <input type="text" id="inputDate">
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="col sml-12">
-        <button class="blue full-width">Save expense</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
+{{expense-form group=model}}
 
 <div class="grid">
   <div class="col sml-12">
