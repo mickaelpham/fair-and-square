@@ -8,7 +8,7 @@ class Api::GroupsController < ApplicationController
 
   # GET /api/groups/1
   def show
-    render json: @group
+    render json: Group.includes(:expenses).find(params[:id]), include: [:expenses]
   end
 
   # POST /api/groups/1

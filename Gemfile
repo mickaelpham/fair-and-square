@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.3.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
@@ -27,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'ember-cli-rails'
 # JSON conventions
 gem 'active_model_serializers', '~> 0.10.0'
+# RubyMoney
+gem 'money-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
@@ -49,4 +53,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# No need with Rails 5 but keep since ember:heroku always put it back
 gem 'rails_12factor', group: [:staging, :production]

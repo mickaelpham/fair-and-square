@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paid_at: 2016-12-19 23:19:22
+  description: MyString
+  group: one
+  amount: 
+
+two:
+  paid_at: 2016-12-19 23:19:22
+  description: MyString
+  group: two
+  amount: 

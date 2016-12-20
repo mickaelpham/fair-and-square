@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219073513) do
+ActiveRecord::Schema.define(version: 20161220071922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expenses", force: :cascade do |t|
+    t.datetime "paid_at"
+    t.string   "description"
+    t.integer  "group_id"
+    t.integer  "amount_cents",    default: 0,     null: false
+    t.string   "amount_currency", default: "USD", null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["group_id"], name: "index_expenses_on_group_id", using: :btree
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
@@ -22,4 +33,5 @@ ActiveRecord::Schema.define(version: 20161219073513) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "expenses", "groups"
 end

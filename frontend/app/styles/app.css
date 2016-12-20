@@ -15,7 +15,8 @@ textarea {
   color: #000;
 }
 
-.group-link:hover {
+.group-link:hover,
+.group-link:focus {
   text-decoration: none;
 }
 
@@ -43,7 +44,7 @@ a.button {
 }
 
 /* Top navbar
--------------------------------------------------------* */
+-------------------------------------------------------- */
 .top-navbar {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -52,4 +53,16 @@ a.button {
 .top-navbar li a.active {
   background-color: #258fd6;
   color: #fff;
+}
+
+/* Expenses (list)
+-------------------------------------------------------- */
+.expense {
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.expense .amount {
+  font-weight: bold;
 }

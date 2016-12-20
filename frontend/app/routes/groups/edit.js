@@ -12,12 +12,12 @@ export default Ember.Route.extend({
       let group = this.controller.get('model');
       group.setProperties(properties);
       group.save().then(() => {
-        this.transitionTo('groups.index');
+        this.transitionTo('groups.show', group);
       });
     },
 
     cancel() {
-      this.transitionTo('groups.index');
+      this.transitionTo('groups.show', this.controller.get('model'));
     },
 
     delete() {
