@@ -5,8 +5,9 @@ export default Ember.Route.extend({
   actions: {
 
     save(properties) {
-      this.store.createRecord('group', properties).save();
-      this.transitionTo('groups.index');
+      this.store.createRecord('group', properties).save().then(() => {
+        this.transitionTo('groups.index');
+      });
     },
 
     cancel() {

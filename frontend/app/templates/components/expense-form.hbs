@@ -9,27 +9,41 @@
   <div class="grid">
     <div class="col sml-12">
       <label for="inputDescription">Description</label>
-      <input type="text" id="inputDescription">
+      {{one-way-input
+        description
+        update=(action (mut description))
+        id="inputDescription"
+      }}
     </div>
   </div>
 
   <div class="grid">
     <div class="col sml-12">
       <label for="inputAmount">Amount</label>
-      <input type="text" id="inputAmount">
+      {{one-way-input
+        amount
+        update=(action (mut amount))
+        id="inputAmount"
+      }}
     </div>
   </div>
 
   <div class="grid">
     <div class="col sml-12">
       <label for="inputDate">Date</label>
-      <input type="text" id="inputDate">
+      {{one-way-input
+        date
+        update=(action (mut date))
+        id="inputDate"
+      }}
     </div>
   </div>
 
   <div class="grid">
     <div class="col sml-12">
-      <button class="blue full-width">Save expense</button>
+      <button class="blue full-width" {{action 'onSubmit'}}>
+        Save expense
+      </button>
     </div>
   </div>
 </fieldset>
