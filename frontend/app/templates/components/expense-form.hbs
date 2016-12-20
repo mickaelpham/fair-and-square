@@ -12,6 +12,7 @@
       {{one-way-input
         description
         update=(action (mut description))
+        placeholder="Briefly describe what this is for"
         id="inputDescription"
       }}
     </div>
@@ -23,6 +24,8 @@
       {{one-way-input
         amount
         update=(action (mut amount))
+        type="number"
+        placeholder="In USD"
         id="inputAmount"
       }}
     </div>
@@ -34,6 +37,7 @@
       {{one-way-input
         date
         update=(action (mut date))
+        placeholder="When was this paid?"
         id="inputDate"
       }}
     </div>

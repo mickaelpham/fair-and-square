@@ -9,7 +9,7 @@ export default Ember.Component.extend({
       this.get('save')({
         description: this.get('description'),
         amount:      this.get('amount'),
-        date:        this.get('date')
+        paidAt:      this.get('date')
       });
     }
 

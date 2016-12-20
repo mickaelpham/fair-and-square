@@ -16,7 +16,7 @@ class Api::GroupsController < ApplicationController
     @group = Group.new(group_params)
 
     if @group.save
-      render json: @group, status: :created, location: api_groups_url(@group)
+      render json: @group, status: :created, location: api_group_url(@group)
     else
       render json: @group,
         status: :unprocessable_entity,
