@@ -16,7 +16,8 @@ textarea {
 }
 
 .group-link:hover,
-.group-link:focus {
+.group-link:focus,
+.group-link:active {
   text-decoration: none;
 }
 

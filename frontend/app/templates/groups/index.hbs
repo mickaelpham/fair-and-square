@@ -1,7 +1,7 @@
 <h3>Groups</h3>
 
 {{#each model as |group|}}
-  {{#link-to 'group' group class="group-link"}}
+  {{#link-to 'group' group.id class="group-link"}}
     <div class="group">
       <div class="group-name">
         {{group.name}}
