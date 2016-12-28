@@ -22,6 +22,10 @@ export default Ember.Component.extend({
         amount:      this.get('amount'),
         paidAt:      this.get('paidAt')
       });
+    },
+
+    onDelete() {
+      this.get('delete')();
     }
 
   }

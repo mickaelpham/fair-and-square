@@ -33,15 +33,13 @@
 
     <div class="grid">
       <div class="col sml-12">
-        {{#if isNew}}
-          <button class="full-width blue" {{action 'onSubmit'}}>
+        <button class="full-width blue" {{action 'onSubmit'}}>
+          {{#if isNew}}
             Create group
-          </button>
-        {{else}}
-          <button class="full-width blue" {{action 'onSubmit'}}>
+          {{else}}
             Save group
-          </button>
-        {{/if}}
+          {{/if}}
+        </button>
       </div>
     </div>
 
@@ -54,7 +52,9 @@
     {{#if exists}}
       <div class="grid">
         <div class="col sml-12">
-          <button class="full-width red" {{action 'onDelete'}}>Delete group</button>
+          <button class="full-width red" {{action 'onDelete'}}>
+            Delete group
+          </button>
         </div>
       </div>
     {{/if}}

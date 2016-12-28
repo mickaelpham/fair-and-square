@@ -1,7 +1,10 @@
+<h3>Edit expense</h3>
+
 {{expense-form
   expense=model
   group=model.group
   save=(route-action 'save')
+  delete=(route-action 'delete')
 }}
 
 <div class="grid">

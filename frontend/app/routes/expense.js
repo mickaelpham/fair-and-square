@@ -14,6 +14,15 @@ export default Ember.Route.extend({
       expense.save().then(() => {
         this.transitionTo('group', expense.get('group.id'));
       });
+    },
+
+    delete() {
+      let expense = this.controller.get('model'),
+          groupId = expense.get('group.id');
+      expense.deleteRecord();
+      expense.save().then(() => {
+        this.transitionTo('group', groupId);
+      });
     }
 
   }

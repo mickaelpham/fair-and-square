@@ -32,6 +32,12 @@ class Api::ExpensesController < ApplicationController
     end
   end
 
+  # DELETE /api/expenses/1
+  def destroy
+    @expense.destroy
+    head :no_content
+  end
+
   private
 
   def set_expense

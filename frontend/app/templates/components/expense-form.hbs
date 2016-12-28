@@ -48,8 +48,22 @@
   <div class="grid">
     <div class="col sml-12">
       <button class="blue full-width" {{action 'onSubmit'}}>
-        Save expense
+        {{#if isNew}}
+          Create expense
+        {{else}}
+          Save expense
+        {{/if}}
       </button>
     </div>
   </div>
+
+  {{#if exists}}
+    <div class="grid">
+      <div class="col sml-12">
+        <button class="full-width red" {{action 'onDelete'}}>
+          Delete expense
+        </button>
+      </div>
+    </div>
+  {{/if}}
 </fieldset>
