@@ -57,10 +57,23 @@ a.button {
 
 /* Expenses (list)
 -------------------------------------------------------- */
+.expense-list {
+  margin-bottom: 2rem;
+}
+
+.expense-list .expense:first-child {
+  border-top: 1px dashed #ccc;
+}
+
 .expense {
   border-bottom: 1px dashed #ccc;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.expense:hover,
+.expense:focus {
+  background: #eee;
 }
 
 .expense .amount {

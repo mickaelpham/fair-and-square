@@ -15,6 +15,8 @@ Router.map(function() {
     this.route('edit');
     this.route('add-expense');
   });
+
+  this.route('expense', { path: '/expenses/:expense_id' });
 });
 
 export default Router;

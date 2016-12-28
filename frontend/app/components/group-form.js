@@ -4,7 +4,7 @@ export default Ember.Component.extend({
 
   didReceiveAttrs() {
     if (this.get('exists')) {
-      this.set('name', this.get('group.name'));
+      this.set('name',        this.get('group.name'));
       this.set('description', this.get('group.description'));
     }
   },

@@ -1,0 +1,19 @@
+{{#each expenses as |e|}}
+  {{#link-to 'expense' e tagName="div" class="expense"}}
+    <div class="grid">
+      <div class="col sml-6">
+        <div class="description">{{e.description}}</div>
+      </div>
+
+      <div class="col sml-6 text-right">
+        <div class="amount">{{e.amountFormatted}}</div>
+      </div>
+
+      <div class="col sml-12 text-right">
+        <div class="date">{{moment-format e.paidAt 'MM/DD/YYYY'}}</div>
+      </div>
+    </div>
+  {{/link-to}}
+{{else}}
+  <p>No expenses found for this group.</p>
+{{/each}}

@@ -1,0 +1,11 @@
+{{expense-form
+  expense=model
+  group=model.group
+  save=(route-action 'save')
+}}
+
+<div class="grid">
+  <div class="col sml-12">
+    {{link-to 'Back to group' 'group' model.group class="button"}}
+  </div>
+</div>

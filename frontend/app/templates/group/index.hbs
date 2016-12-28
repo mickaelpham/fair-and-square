@@ -9,25 +9,7 @@
 
 <h4>Last expenses</h4>
 
-{{#each model.expenses as |e|}}
-  <div class="expense">
-    <div class="grid">
-      <div class="col sml-6">
-        <div class="description">{{e.description}}</div>
-      </div>
-
-      <div class="col sml-6 text-right">
-        <div class="amount">{{e.amountFormatted}}</div>
-      </div>
-
-      <div class="col sml-12 text-right">
-        <div class="date">{{moment-format e.paidAt 'MM/DD/YYYY'}}</div>
-      </div>
-    </div>
-  </div>
-{{else}}
-  <p>No expenses found for this group.</p>
-{{/each}}
+{{expense-list expenses=model.expenses}}
 
 <div class="grid">
   <div class="col sml-12">

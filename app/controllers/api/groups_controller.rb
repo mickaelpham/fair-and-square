@@ -11,7 +11,7 @@ class Api::GroupsController < ApplicationController
     render json: Group.includes(:expenses).find(params[:id]), include: [:expenses]
   end
 
-  # POST /api/groups/1
+  # POST /api/groups
   def create
     @group = Group.new(group_params)
 

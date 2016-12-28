@@ -1,8 +1,9 @@
 class Api::ExpensesController < ApplicationController
+  before_action :set_expense, only: [:show, :update, :destroy]
 
   # GET /api/expenses/1
   def show
-    render json: Expense.find(params[:id])
+    render json: @expense, include: [:group]
   end
 
   # POST /api/expenses
@@ -18,6 +19,23 @@ class Api::ExpensesController < ApplicationController
         status: :unprocessable_entity,
         serializer: ActiveModel::Serializer::ErrorSerializer
     end
+  end
+
+  # PATCH/PUT /api/expenses/1
+  def update
+    if @expense.update(expense_params)
+      render json: @expense
+    else
+      render json: @expense,
+        status: :unprocessable_entity,
+        serializer: ActiveModel::Serializer::ErrorSerializer
+    end
+  end
+
+  private
+
+  def set_expense
+    @expense = Expense.find(params[:id])
   end
 
   def expense_params
